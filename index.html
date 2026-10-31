@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarangayConnect System</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        :root { --primary: #0b5ed7; --dark: #1e293b; --light: #f8fafc; --accent: #f59e0b; }
+        
+        body { background-color: #f0f4f8; color: var(--dark); line-height: 1.6; }
+        header { background: linear-gradient(135deg, var(--primary), #084298); color: white; padding: 1rem 5%; position: sticky; top: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        nav a { color: white; text-decoration: none; margin-left: 1.5rem; }
+        nav a:hover { color: #ffd700; }
+        
+        .hero { background: linear-gradient(rgba(11, 94, 215, 0.9), rgba(8, 66, 152, 0.9)), url('') center/cover; color: white; padding: 5rem 5%; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem; }
+        .btn { display: inline-block; padding: 0.8rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; margin: 0.5rem; transition: transform 0.3s; }
+        .btn-primary { background: var(--accent); color: black; }
+        .btn-primary:hover { transform: translateY(-3px); }
+        .btn-light { background: white; color: var(--primary); }
+        
+        .features { padding: 4rem 5%; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 3rem; color: var(--primary); }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .feature-card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center; transition: 0.3s; }
+        .feature-card:hover { transform: translateY(-5px); }
+        .feature-card h3 { color: var(--primary); margin: 1rem 0; }
+        .icon { font-size: 2.5rem; }
+        
+        .about { background: white; padding: 4rem 5%; }
+        .about-container { max-width: 1000px; margin: 0 auto; text-align: center; }
+        
+        footer { background: var(--dark); color: white; text-align: center; padding: 2rem; margin-top: 2rem; }
+        
+        @media(max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 1rem; }
+            .hero h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header / Navigation -->
+<header>
+    <div class="nav-container">
+        <div class="logo">🏘️ BarangayConnect</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#services">Services</a>
+            <a href="#announcements">Announcements</a>
+            <a href="#about">About</a>
+            <a href="login.html" class="btn btn-light" style="padding:0.4rem 1rem; font-size:0.9rem;">Login</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Welcome to BarangayConnect</h1>
+    <p>Your one-stop digital platform for barangay services, announcements, and community updates — connecting residents and local officials easily.</p>
+    <a href="#services" class="btn btn-primary">Explore Services</a>
+    <a href="register.html" class="btn btn-light">Register Now</a>
+</section>
+
+<!-- Features / Services -->
+<section class="features" id="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="icon">📄</div>
+            <h3>Document Requests</h3>
+            <p>Apply for Barangay Clearance, Certificate of Residency, Indigency Letter, and more online.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📢</div>
+            <h3>Announcements</h3>
+            <p>Stay updated with news, advisories, scholarships, and upcoming community events.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">⚠️</div>
+            <h3>Emergency Alerts</h3>
+            <p>Receive real-time notifications on typhoons, floods, and safety advisories.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">💬</div>
+            <h3>Report a Concern</h3>
+            <p>Submit complaints or issues with photos and track the resolution progress.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📅</div>
+            <h3>Community Calendar</h3>
+            <p>View schedules for health missions, assemblies, and barangay activities.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">👤</div>
+            <h3>Resident Portal</h3>
+            <p>Manage your profile, track requests, and access your records anytime.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Announcements Section -->
+<section class="features" id="announcements" style="background:#fff; border-radius:15px; margin:2rem; padding:3rem;">
+    <h2 class="section-title">Latest Announcements</h2>
+    <div style="max-width:800px; margin:0 auto;">
+        <div style="border-left:4px solid #0b5ed7; padding:1rem; margin-bottom:1rem; background:#f8fafc;">
+            <strong>📢 New Office Hours</strong><br>
+            Starting Nov 1: Mon–Fri, 8:00 AM – 5:00 PM<br>
+            <small>Posted: Oct 30, 2026</small>
+        </div>
+        <div style="border-left:4px solid #f59e0b; padding:1rem; margin-bottom:1rem; background:#fef9e7;">
+            <strong>🏥 Free Medical Mission</strong><br>
+            Scheduled: Nov 15, 2026 — Bring your family! Pre-register now.<br>
+            <small>Posted: Oct 28, 2026</small>
+        </div>
+        <div style="border-left:4px solid #ef4444; padding:1rem; background:#fef2f2;">
+            <strong>⚠️ Weather Advisory</strong><br>
+            Keep updated — monitor local news for rainfall warnings.<br>
+            <small>Posted: Oct 25, 2026</small>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="about-container">
+        <h2 class="section-title">About BarangayConnect</h2>
+        <p><strong>BarangayConnect</strong> is a web-based management information system designed to digitize and streamline barangay operations. It bridges the gap between residents and officials — making services faster, records organized, and communication transparent.</p>
+        <br>
+        <p><em>"Connecting Our Community, One Click at a Time."</em></p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>🏘️ BarangayConnect System © 2026</p>
+    <p>Designed for Efficient & Transparent Barangay Services</p>
+    <p style="margin-top:0.5rem; font-size:0.9rem;">Contact: barangayconnect@email.com | Barangay Hall, Philippines</p>
+</footer>
+
+</body>
+</html>
